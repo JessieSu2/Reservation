@@ -1,0 +1,35 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Reservation Tables</h1>
+<table class ="table">
+  <thead>
+    <tr>
+      <th scope="col">Party Number</th>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Time</th>
+      <th scope="col">Show</th>
+      <th scope="col">Delete</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <div id="reservationtables">
+      <% @reservationtables.each do |reservationtable| %>
+      
+      <tr>
+        <th scope="row"><%=reservationtable.people%></th>
+        <th scope="row"><%=reservationtable.name%></th>
+        <th scope="row"><%=reservationtable.phone%></th>
+        <th scope="row"><%=reservationtable.rsvptime.strftime("%m/%d/%Y %H:00")%></th>
+        <th scope="row"><%= link_to "Show", reservationtable %></th>
+        <th scope="row"><%= button_to "Delete", reservationtable, method: :delete %></th>
+      </tr> 
+      <% end %>
+    </div>
+  </tbody>
+</table>
+
+
+
+<%# <%= link_to "New reservationtable", new_reservationtable_path %>
