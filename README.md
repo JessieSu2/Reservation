@@ -3,7 +3,7 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-[ ]Please implement using ruby ~> 2.7.5, with Rails 5+
+[X]Please implement using ruby ~> 2.7.5, with Rails 5+
 
 ● No user accounts or authentication are necessary
 
